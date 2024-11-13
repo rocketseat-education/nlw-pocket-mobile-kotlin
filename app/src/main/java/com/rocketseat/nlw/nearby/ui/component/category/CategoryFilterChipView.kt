@@ -1,4 +1,4 @@
-package com.rocketseat.nlw.nearby.data.model
+package com.rocketseat.nlw.nearby.ui.component.category
 
 import androidx.annotation.DrawableRes
 import com.rocketseat.nlw.nearby.R
