@@ -18,7 +18,7 @@ enum class CategoryFilterChipView(
 
     companion object {
         fun fromDescription(description: String): CategoryFilterChipView? {
-            return values().find { it.description == description }
+            return entries.find { it.description == description }
         }
     }
 }
