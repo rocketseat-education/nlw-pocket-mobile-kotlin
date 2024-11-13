@@ -83,7 +83,7 @@ fun NearbyMarketDetailsInfos(modifier: Modifier = Modifier, market: Market) {
 
 @Preview
 @Composable
-private fun NearbyMarketDetailsInfosPreview() {
+private fun MarketDetailsInfosPreview() {
     NearbyMarketDetailsInfos(
         modifier = Modifier.fillMaxWidth(),
         market = mockMarkets.first()

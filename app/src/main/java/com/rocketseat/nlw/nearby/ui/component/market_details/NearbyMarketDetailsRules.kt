@@ -36,7 +36,7 @@ fun NearbyMarketDetailsRules(modifier: Modifier = Modifier, rules: List<Rule>) {
 
 @Preview
 @Composable
-private fun NearbyMarketDetailsRulesPreview() {
+private fun MarketDetailsRulesPreview() {
     NearbyMarketDetailsRules(
         modifier = Modifier.fillMaxWidth(),
         rules = mockRules

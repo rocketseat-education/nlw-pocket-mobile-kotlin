@@ -11,5 +11,5 @@ data class Market(
     val longitude: Double,
     val address: String,
     val phone: String,
-    val cover: String
+    val cover: String,
 )

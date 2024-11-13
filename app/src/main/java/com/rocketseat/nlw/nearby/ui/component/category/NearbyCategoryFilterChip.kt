@@ -24,7 +24,7 @@ fun NearbyCategoryFilterChip(
     modifier: Modifier = Modifier,
     category: Category,
     isSelected: Boolean,
-    onClick: (isSelected: Boolean) -> Unit,
+    onClick: (isSelected: Boolean) -> Unit
 ) {
     FilterChip(
         modifier = modifier
@@ -39,7 +39,7 @@ fun NearbyCategoryFilterChip(
                     modifier = Modifier.size(16.dp),
                     painter = painterResource(id = it),
                     tint = if (isSelected) Color.White else Gray400,
-                    contentDescription = "Icone de Filtro de Categoria"
+                    contentDescription = "Ícone de Filtro de Categoria"
                 )
             }
         },
@@ -53,7 +53,7 @@ fun NearbyCategoryFilterChip(
         ),
         colors = FilterChipDefaults.filterChipColors(
             containerColor = Color.White,
-            selectedContainerColor = GreenBase
+            selectedContainerColor = GreenBase,
         ),
         selected = isSelected,
         onClick = { onClick(!isSelected) },
@@ -76,9 +76,10 @@ private fun NearbyCategoryFilterChipPreview() {
             name = "Alimentação"
         ),
         isSelected = true,
-        onClick = { }
+        onClick = {}
     )
 }
+
 
 @Preview
 @Composable
@@ -89,6 +90,6 @@ private fun NearbyCategoryFilterChipNotSelectedPreview() {
             name = "Cinema"
         ),
         isSelected = false,
-        onClick = { }
+        onClick = {}
     )
 }

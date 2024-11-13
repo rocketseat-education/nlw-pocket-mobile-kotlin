@@ -52,7 +52,10 @@ fun NearbyMarketCard(
         }
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().background(Gray100).padding(8.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(Gray100)
+                .padding(8.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(16.dp)
         ) {
@@ -83,8 +86,8 @@ fun NearbyMarketCard(
                 ) {
                     Icon(
                         modifier = Modifier.size(24.dp),
-                        tint = if(market.coupons > 0) RedBase else Gray400,
-                        painter = painterResource(R.drawable.ic_ticket),
+                        tint = if (market.coupons > 0) RedBase else Gray400,
+                        painter = painterResource(id = R.drawable.ic_ticket),
                         contentDescription = "Ícone de Cupom"
                     )
                     Text(
@@ -104,7 +107,7 @@ private fun NearbyMarketCardPreview() {
     NearbyMarketCard(
         modifier = Modifier.fillMaxWidth(),
         market = Market(
-            id = "012576ea-441-4b8a-89e5-d5f32104c7c4",
+            id = "012576ea-4441-4b8a-89e5-d5f32104c7c4",
             categoryId = "146b1a88-b3d3-4232-8b8f-c1f006f1e86d",
             name = "Sabor Grill",
             description = "Churrascaria com cortes nobres e buffet variado. Experiência completa para os amantes de carne.",
@@ -114,7 +117,7 @@ private fun NearbyMarketCardPreview() {
             longitude = -46.65814845249887,
             address = "Av. Paulista - Bela Vista",
             phone = "(11) 94567-1212",
-            cover = "https://images.unsplash.com/photo-1498954896293-37aacf113df9?w=400&h=300"
+            cover = "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=400&h=300"
         ),
         onClick = {}
     )

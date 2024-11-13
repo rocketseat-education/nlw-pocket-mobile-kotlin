@@ -2,6 +2,7 @@ package com.rocketseat.nlw.nearby.ui.component.category
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
@@ -22,13 +23,10 @@ fun NearbyCategoryFilterChipList(
     categories: List<Category>,
     onSelectedCategoryChanged: (Category) -> Unit
 ) {
-    var selectedCategoryId by remember {
-        mutableStateOf(categories.firstOrNull()?.id.orEmpty())
-    }
+    var selectedCategoryId by remember { mutableStateOf(categories.firstOrNull()?.id.orEmpty()) }
 
     LaunchedEffect(key1 = selectedCategoryId) {
         val selectedCategoryOrNull = categories.find { it.id == selectedCategoryId }
-
         selectedCategoryOrNull?.let {
             onSelectedCategoryChanged(it)
         }
@@ -44,7 +42,8 @@ fun NearbyCategoryFilterChipList(
                 category = category,
                 isSelected = category.id == selectedCategoryId,
                 onClick = { isSelected ->
-                    if(isSelected) selectedCategoryId = category.id
+                    if (isSelected)
+                        selectedCategoryId = category.id
                 }
             )
         }
@@ -55,6 +54,7 @@ fun NearbyCategoryFilterChipList(
 @Composable
 private fun NearbyCategoryFilterChipListPreview() {
     NearbyCategoryFilterChipList(
+        modifier = Modifier.fillMaxWidth(),
         categories = mockCategories,
         onSelectedCategoryChanged = {}
     )

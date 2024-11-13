@@ -26,10 +26,10 @@ import com.rocketseat.nlw.nearby.ui.theme.Typography
 
 @Composable
 fun NearbyMarketDetailsCoupons(modifier: Modifier = Modifier, coupons: List<String>) {
-    Column (
+    Column(
         modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(16.dp)
-    ){
+    ) {
         Text(text = "Utilize esse cupom", style = Typography.headlineSmall, color = Gray400)
         coupons.forEach { coupon ->
             Row(
@@ -44,7 +44,7 @@ fun NearbyMarketDetailsCoupons(modifier: Modifier = Modifier, coupons: List<Stri
             ) {
                 Icon(
                     modifier = Modifier.size(24.dp),
-                    painter = painterResource(id = R.drawable.ic_ticket),
+                    painter = painterResource(R.drawable.ic_ticket),
                     tint = GreenBase,
                     contentDescription = "Ícone Cupons"
                 )
@@ -56,7 +56,7 @@ fun NearbyMarketDetailsCoupons(modifier: Modifier = Modifier, coupons: List<Stri
 
 @Preview
 @Composable
-private fun NearbyMarketDetailsCouponsPreview() {
+private fun MarketDetailsCouponsPreview() {
     NearbyMarketDetailsCoupons(
         modifier = Modifier.fillMaxWidth(),
         coupons = listOf("FM4345T5", "FM4345T6")

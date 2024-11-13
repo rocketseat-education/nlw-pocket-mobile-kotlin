@@ -12,6 +12,7 @@ import com.rocketseat.nlw.nearby.data.model.Market
 import com.rocketseat.nlw.nearby.data.model.mock.mockMarkets
 import com.rocketseat.nlw.nearby.ui.theme.Typography
 
+
 @Composable
 fun NearbyMarketCardList(
     modifier: Modifier = Modifier,
@@ -28,7 +29,9 @@ fun NearbyMarketCardList(
         items(items = markets, key = { it.id }) { market ->
             NearbyMarketCard(
                 market = market,
-                onClick = { onMarketClick(market) }
+                onClick = {
+                    onMarketClick(market)
+                }
             )
         }
     }

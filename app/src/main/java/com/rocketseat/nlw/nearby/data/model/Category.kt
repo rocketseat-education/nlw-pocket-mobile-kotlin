@@ -5,7 +5,7 @@ import com.rocketseat.nlw.nearby.ui.component.category.CategoryFilterChipView
 
 data class Category(
     val id: String,
-    val name: String,
+    val name: String
 ) {
     @get:DrawableRes
     val icon: Int?

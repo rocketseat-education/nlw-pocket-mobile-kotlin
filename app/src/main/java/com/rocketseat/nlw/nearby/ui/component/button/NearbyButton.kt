@@ -31,7 +31,7 @@ fun NearbyButton(
     Button(
         modifier = modifier.heightIn(min = 56.dp),
         shape = RoundedCornerShape(16.dp),
-        contentPadding = if(text == null && iconRes != null) PaddingValues(0.dp) else ButtonDefaults.ContentPadding,
+        contentPadding = if (text == null && iconRes != null) PaddingValues(0.dp) else ButtonDefaults.ContentPadding,
         colors = ButtonDefaults.buttonColors(
             containerColor = GreenBase
         ),
@@ -42,7 +42,7 @@ fun NearbyButton(
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             iconRes?.let {
-                Icon(painter = painterResource(id = iconRes), contentDescription = "Icone do Botão")
+                Icon(painter = painterResource(id = iconRes), contentDescription = "Ícone do Botão")
             }
             text?.let { Text(text = text.uppercase(), style = Typography.labelLarge) }
         }
@@ -53,7 +53,7 @@ fun NearbyButton(
 @Composable
 private fun NearbyButtonPreview() {
     NearbyButton(
-        modifier= Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth(),
         text = "Confirmar",
         iconRes = R.drawable.ic_scan
     ) {}
@@ -63,7 +63,7 @@ private fun NearbyButtonPreview() {
 @Composable
 private fun NearbyButtonNoIconPreview() {
     NearbyButton(
-        modifier= Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth(),
         text = "Confirmar",
     ) {}
 }
@@ -72,7 +72,7 @@ private fun NearbyButtonNoIconPreview() {
 @Composable
 private fun NearbyButtonNoTextPreview() {
     NearbyButton(
-        modifier= Modifier,
+        modifier = Modifier,
         iconRes = R.drawable.ic_arrow_left
     ) {}
 }
