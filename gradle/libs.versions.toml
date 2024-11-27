@@ -12,6 +12,9 @@ mapsCompose = "4.3.3"
 coil = "3.0.0-rc01"
 navigation = "2.8.3"
 kotlinSerialization = "1.7.3"
+ktorBom = "3.0.0"
+zxing = "3.5.1"
+zxingAndroidEmbedded = "4.3.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -30,11 +33,29 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 maps-compose = { group = "com.google.maps.android", name = "maps-compose", version.ref = "mapsCompose" }
 coil-compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+coil-network-okhttp = { group = "io.coil-kt.coil3", name = "coil-network-okhttp", version.ref = "coil" }
 navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
 kotlin-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinSerialization" }
+ktor-bom = { group = "io.ktor", name = "ktor-bom", version.ref = "ktorBom" }
+ktor-client-android = { group = "io.ktor", name = "ktor-client-android" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging" }
+ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serialization" }
+ktor-client-serialization-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json" }
+zxing = { group = "com.google.zxing", name = "core", version.ref = "zxing" }
+zxing-android-embedded = { group = "com.journeyapps", name = "zxing-android-embedded", version.ref = "zxingAndroidEmbedded" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+[bundles]
+ktor-client = [
+    "ktor-client-android",
+    "ktor-client-content-negotiation",
+    "ktor-client-logging",
+    "ktor-client-serialization",
+    "ktor-client-serialization-json"
+]
 
